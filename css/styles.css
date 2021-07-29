@@ -144,15 +144,30 @@ img {
 
 /* Hero */
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: var(--blocks-bg-color);
   text-align: center;
+}
+
+.overlay {
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  min-height: 600px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-color: var(--blocks-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
   margin-bottom: var(--margin-set);
-
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -186,6 +201,7 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .section-title.hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -193,23 +209,51 @@ img {
   height: 1px;
   margin: -1px;
 }
+
 .features {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--margin-set));
   margin-left: calc(-1 * var(--margin-set));
 }
+
 .features > .item {
   flex-basis: calc(100% / 4 - var(--margin-set));
   margin-top: var(--margin-set);
   margin-left: var(--margin-set);
 }
+
+.features > .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+
+  background-color: var(--secondary-bg-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
 .features-title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
 }
+
 .features-text {
   color: var(--text-color);
   font-weight: 400;
@@ -339,8 +383,13 @@ img {
 .button-secondary.current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
   box-shadow: var(--btn-secondary-shadow);
 }
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
