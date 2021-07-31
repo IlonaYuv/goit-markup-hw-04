@@ -348,8 +348,8 @@ img {
   fill: var(--icon-color);
 }
 
-.social-icon:hover,
-.social-icon:focus {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: var(--primary-white-color);
 }
 
@@ -386,8 +386,8 @@ img {
   fill: var(--icon-color);
 }
 
-.client-icon:hover,
-.client-icon:focus {
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
   fill: var(--accent-color);
 }
 
@@ -454,7 +454,8 @@ img {
   border-radius: 50%;
 }
 
-.social-link.secondary:hover {
+.social-link.secondary:hover,
+.social-link.secondary:focus {
   background-color: var(--accent-color);
 }
 
