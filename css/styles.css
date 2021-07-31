@@ -403,6 +403,15 @@ img {
 
   background-color: var(--blocks-bg-color);
 }
+.main {
+  align-items: baseline;
+}
+
+.address-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 .footer-adress {
   margin-top: 20px;
   color: var(--primary-white-color);
@@ -423,14 +432,17 @@ img {
 
   color: var(--primary-white-color);
 }
+.footer-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 70px;
+  align-content: flex-start;
+}
 
 .footer-social-list {
   display: flex;
   align-items: center;
-}
-
-.footer-thumb {
-  margin-left: 70px;
 }
 
 .social-icon.secondary {
